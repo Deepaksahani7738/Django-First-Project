@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+{% for post in result %}
+    <h4><a href="{% url 'detail' id=post.id %}">{{post.name}}</a></h4>
+    <h5><mark>{{post.designation}}</mark></h5>
+    <p>{{post.mobile_no}}</p>
+    <p>{{post.create_date}}</p>
+    <hr>
+
+{% endfor %}
+
+
+{% endblock %}
